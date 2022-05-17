@@ -1,0 +1,23 @@
+{
+  "name": "asyncake",
+  "version": "1.0.0",
+  "description": "Async Chains like a boss, piece of cake!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsvieira/asyncake.git"
+  },
+  "keywords": [
+    "async",
+    "chains"
+  ],
+  "author": "Filipe Vieira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fsvieira/asyncake/issues"
+  },
+  "homepage": "https://github.com/fsvieira/asyncake#readme"
+}
