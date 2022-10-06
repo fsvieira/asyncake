@@ -75,6 +75,10 @@ class Calc {
     get chain () {
         return asyncChain(this);
     }
+
+    throwException () {
+        throw "THIS IS A EXCEPTIONAL TEST";
+    }
 }
 
 async function fn (wait, text) {
@@ -115,6 +119,22 @@ async function main () {
 
     await asyncChain(fn)(1000, 'hello')(0,'world')(100, "!");
     await asyncChain(fn2)(1000)('hello')(0)('world')(100)("!");
+
+    try {
+        const ac = await asyncChain(t).number(4).number(1).minus().number(2).self.mul().number(3).add().throwException()
+            .finally(() => console.log("THIS STILL RUNS FINALLY"));
+        console.log("THIS SHOULD NEVER BE PRINTED", ac);
+    }
+    catch (e) {
+        console.log(e);
+    }
+
+    {
+        const ac = await asyncChain(t).number(4).number(1).minus().number(2).self.mul().number(3).add().pop().finally(
+            () => console.log("THIS RUNS ON finally")
+        );
+        console.log("Result ", ac);
+    }
 }
 
 main();

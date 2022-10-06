@@ -6,6 +6,13 @@ function asyncChain (obj) {
             if (prop === 'then') {
                 return (...args) => promise.then(...args);
             }
+            else if (prop === 'finally') {
+                return (...args) => promise.finally(...args);
+
+            }
+            else if (prop === 'catch') {
+                return (...args) => promise.catch(...args);
+            }
 
             promise = promise.then(obj => {
                 const c = obj[prop];
