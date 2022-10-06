@@ -34,6 +34,8 @@ this:
 
 Async Cake solves the problem and make async chains a piece of cake to work with.
 
+Note: asyncake also supports the catch and finally methods.
+
 You can check the full example here https://github.com/fsvieira/asyncake/blob/main/test.js
 
 
